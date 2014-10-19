@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none" >
+
+    <com.dodola.sticklist.ScrollViewSuperExtend
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#abcdef"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/scroll_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/cover_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#985839"
+                android:minHeight="200.0dip" >
+            </FrameLayout>
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:layout_gravity="bottom" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="500dp"
+                android:background="#dddddd" />
+        </LinearLayout>
+    </com.dodola.sticklist.ScrollViewSuperExtend>
+
+</FrameLayout>
